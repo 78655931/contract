@@ -608,7 +608,14 @@ class ReservationAction extends CommonAction {
         exit ( json_encode ( $listOpt ) );
 
 
-	}
+    }
+    public function suggest()
+    {
+        $return['suggestions'] = array('test1','test2');
+        $return['data'] = array('a1','b1');
+        $return['query'] = array('aa');
+        exit(json_encode($return));
+    }
 
 }
 ?>
